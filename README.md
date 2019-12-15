@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Star War People Search Web App
+## Developed by React with swapi.co APIs.
 
-## Available Scripts
+This single page web application has two pages; people list page and person info page.
 
 In the project directory, you can run:
 

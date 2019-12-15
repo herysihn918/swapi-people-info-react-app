@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Card, Navbar, Spinner, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
 // fetch function
 import { get_fetch_url } from './../apis/apiFunctions'
 
@@ -7,6 +8,7 @@ export default class PersonDetail extends Component {
     state = {
         isloaded: false,
         loadingText: null,
+        name: null,
         films: [],
         species: [],
         vehicles: [],
@@ -53,6 +55,9 @@ export default class PersonDetail extends Component {
     render() {
         return (
             <>
+                <Helmet>
+                    <title>{this.state.name === null ? "Person Info" : this.state.name}&nbsp;|&nbsp;Star War Universe People</title>
+                </Helmet>
                 <Navbar bg="dark" variant="dark" className="mb-5">
                     <div className="container">
                         <Navbar.Brand href="/">Star War Universe People</Navbar.Brand>

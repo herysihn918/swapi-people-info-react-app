@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Table, Pagination, Row, Col, Button, Spinner, Card } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import {Helmet} from 'react-helmet' 
 //fetch functions
 import {get_fetch_url} from './../apis/apiFunctions'
 //self-components
@@ -93,6 +94,9 @@ export default class PeopleList extends Component {
 
         return (
             <>
+            <Helmet>
+                <title>People List | Star War Universe People</title>
+            </Helmet>
             <Header MotherComp={this} />
             <Row className="py-3 px-0 container m-auto">
                 <Col>
