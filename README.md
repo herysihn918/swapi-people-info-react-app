@@ -3,6 +3,9 @@
 
 This single page web application has two pages; people list page and person info page.
 
+### Used Packages
+react-router-dom, react-bootstrap, react-helmet
+
 In the project directory, you can run:
 
 ### `yarn start`
