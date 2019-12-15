@@ -13,7 +13,7 @@ class PeopleTable extends Component {
     
     render(){
         return (
-            <Table striped bordered hover variant="dark">
+            <Table striped bordered hover responsive variant="dark">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -98,7 +98,7 @@ export default class PeopleList extends Component {
                 <title>People List | Star War Universe People</title>
             </Helmet>
             <Header MotherComp={this} />
-            <Row className="py-3 px-0 container m-auto">
+            <Row className="py-5 px-0 container m-auto">
                 <Col>
                     {this.state.isloaded ? (
                         <Card bg="dark" text="white" >
@@ -109,7 +109,7 @@ export default class PeopleList extends Component {
                     ) : (
                         <>
                         <PeopleTable list = {this.state.results}/>
-                        <Pagination className="justify-content-end">
+                        <Pagination className="pt-4 justify-content-end">
                             <Pagination.Prev 
                                 disabled={this.state.previous === null ? true : false}
                                 onClick={() => this._recallAPI(this.state.page - 1)}
